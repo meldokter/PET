@@ -124,7 +124,7 @@ perfil21testecodf <- perfil21testecodf %>%
     P7 == "Não" ~ 9, 
     P7 == "2.0" ~ 2))
 
-#Criação do banco final 
+#3. Criação do banco final 
 perfil21codificado <- perfil21testecodf %>%
   select(NUSP, P1, P2_codificado, P2_outra, P3a_codificado, P3b_codificado, P4a_codificado,
          P4b_codificado, P4b_outra, P5_codificado, P5_outra, P6_codificado, P7_codificado)
