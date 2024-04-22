@@ -3,7 +3,7 @@
 # 1.Importando o banco de dados
 # 1.1 - Maneira mais simples
 library(readxl)
-Perfil_2021 <- read_excel("Pesquisa.Ingressantes.2021.xlsx")
+perfil21 <- read_excel("Pesquisa.Ingressantes.2021.xlsx")
 View(Pesquisa_Ingressantes_2021)
 
 #1.2 - Caso aquela não funcione, precisa direcionar o R para o diretorio
@@ -132,3 +132,11 @@ perfil21codificado <- perfil21testecodf %>%
 view(perfil21codificado)
 
 #3.1 Exportação do banco final em excel 
+install.packages("openxlsx")
+library(openxlsx)
+
+# Especifique o caminho e o nome do arquivo Excel 
+arquivo <- "caminho/para/seu/arquivo/perfil21codificado.xlsx"
+#pode colocar em qualquer pasta do pc 
+
+write.xlsx(perfil21codificado, arquivo)
