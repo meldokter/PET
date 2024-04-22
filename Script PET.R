@@ -43,6 +43,7 @@ perfil21teste <- perfil21teste %>%
          P7 = `P7. Filhos?`)
 
 #2.3 Codificar as variaveis 
+install.packages("dplyr)
 library(dplyr)
 
 #P2
@@ -129,3 +130,5 @@ perfil21codificado <- perfil21testecodf %>%
   select(NUSP, P1, P2_codificado, P2_outra, P3a_codificado, P3b_codificado, P4a_codificado,
          P4b_codificado, P4b_outra, P5_codificado, P5_outra, P6_codificado, P7_codificado)
 view(perfil21codificado)
+
+#3.1 Exportação do banco final em excel 
