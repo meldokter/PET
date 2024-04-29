@@ -132,11 +132,4 @@ perfil21codificado <- perfil21testecodf %>%
 view(perfil21codificado)
 
 #3.1 Exportação do banco final em excel 
-install.packages("openxlsx")
-library(openxlsx)
-
-# Especifique o caminho e o nome do arquivo Excel 
-arquivo <- "caminho/para/seu/arquivo/perfil21codificado.xlsx"
-#pode colocar em qualquer pasta do pc 
-
-write.xlsx(perfil21codificado, arquivo)
+write.csv(perfil21codificado, file = "perfil21codificado.csv")
